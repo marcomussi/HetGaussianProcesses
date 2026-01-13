@@ -16,11 +16,9 @@ class HeteroskedasticGaussianProcessRegressorRBF:
 
     def load_data(self, x, y):
         
-        assert x.ndim == 2 and x.shape[1] == self.input_dim, \
-                "load_data() function: Error in input"
+        assert x.ndim == 2 and x.shape[1] == self.input_dim, "load_data(): Error in input"
         assert (y.ndim == 2 and y.shape == (x.shape[0], 1)) or (
-            y.ndim == 1 and y.shape == (x.shape[0], )), \
-                "load_data() function: Error in input"
+            y.ndim == 1 and y.shape == (x.shape[0], )), "load_data(): Error in input"
         
         self.x_vect, self.y_vect, samples_vect = aggregate_dataset(x, y.ravel())
         n = self.x_vect.shape[0]
@@ -39,14 +37,12 @@ class HeteroskedasticGaussianProcessRegressorRBF:
 
     def get_eigvals(self):
         
-        # return np.linalg.eigvalsh(self.K_matrix)
         return np.linalg.svd(self.K_matrix, compute_uv=False, hermitian=True)
 
 
     def compute(self, x):
         
-        assert x.ndim == 2 and x.shape[1] == self.input_dim, \
-            "compute() function: Error in input dimension"
+        assert x.ndim == 2 and x.shape[1] == self.input_dim, "compute(): Error in input"
         
         n = x.shape[0]
         postmean = np.zeros(n)
