@@ -7,11 +7,10 @@
 If you are using this code for your scientific publications, please cite:
 
     @article{mussi2025hetgps,
-      author  = {Mussi, Marco and 
+      author  = {Author, Marco and 
                  Restelli, Marcello and
                  Metelli, Alberto Maria},
-      title   = {On the Equivalence and Efficiency of Heteroscedastic 
-                 Gaussian Processes in Supervised and Online Learning},
+      title   = {TODO},
       journal = {ArXiv},
       year    = {2025}
     }

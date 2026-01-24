@@ -21,9 +21,6 @@ class IGPUCB:
         self.delta = delta
         self.het = het
         self.incr_update = incr_update
-
-        if het and incr_update:
-            raise NotImplementedError("not implemented yet")
         
         self.reset()
 

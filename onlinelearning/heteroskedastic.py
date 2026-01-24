@@ -6,11 +6,12 @@ from utils import kernel_rbf
 class HeteroskedasticGaussianProcessRegressorRBF: 
 
 
-    def __init__(self, kernel_L, regularization, input_dim=1):
+    def __init__(self, kernel_L, regularization, input_dim=1, incr_update=True):
         
         self.kernel_L = kernel_L
         self.regularization = regularization  
         self.input_dim = input_dim
+        self.incr_update = incr_update
         self.reset()
 
 
