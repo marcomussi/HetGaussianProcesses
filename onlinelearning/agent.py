@@ -22,6 +22,9 @@ class IGPUCB:
         self.het = het
         self.incr_update = incr_update
         
+        if self.het and self.incr_update:
+            raise NotImplementedError("Heteroskedastic GP with incremental update not implemented yet")
+
         self.reset()
 
         

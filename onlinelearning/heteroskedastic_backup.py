@@ -14,9 +14,6 @@ class HeteroskedasticGaussianProcessRegressorRBF:
         self.incr_update = incr_update
         self.reset()
 
-        if self.incr_update:
-            raise NotImplementedError("Incremental update not implemented yet")
-
 
     def add_sample(self, x, y):
 
